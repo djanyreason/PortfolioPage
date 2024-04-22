@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import Projects from './Projects';
+
+const testProjData = [
+  {
+    name: 'FSO_02',
+    url: 'https://github.com/djanyreason/FSO_02',
+    about:
+      'This repository is for exercises in Part 2 of Full Stack Open, "Communicating with server". The projects in this repo are all basic front-end-only web apps built in React, which interact with local and remote servers using Axios.',
+    keywords: ['react', 'axios', 'json-server', 'react-css'],
+  },
+];
 
 const Portfolio = () => {
-  const [count, setCount] = useState(0);
-
-  const incCount = (event) => {
-    event.preventDefault();
-    setCount(count + 1);
-  };
-
   return (
     <div>
-      <p>This is the Portfolio Section</p>
-      <p>Portfolio Click Count: {count}</p>
-      <button onClick={incCount}>Portfolio Increment</button>
+      <Projects projectList={testProjData} />
     </div>
   );
 };
