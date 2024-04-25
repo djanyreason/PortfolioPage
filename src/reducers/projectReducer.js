@@ -2,11 +2,21 @@ import { createSlice } from '@reduxjs/toolkit';
 import portfolioService from '../services/portfolio';
 
 const projectSlice = createSlice({
-  name: 'projects',
-  initialState: [],
+  name: 'portfolio',
+  initialState: { projects: [], keywords: [] },
   reducers: {
     overwriteProjectState(state, action) {
-      return action.payload;
+      return {
+        projects: action.payload,
+        keywords: [
+          ...new Set(
+            action.payload.reduce(
+              (merge, project) => merge.concat(project.keywords),
+              []
+            )
+          ),
+        ],
+      };
     },
   },
 });

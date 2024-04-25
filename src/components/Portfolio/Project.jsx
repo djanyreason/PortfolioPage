@@ -13,8 +13,6 @@ const Project = ({ proj }) => {
     marginBottom: 5,
   };
 
-  console.log(detail, detailStyle);
-
   return (
     <div style={projStyle}>
       {proj.name}
