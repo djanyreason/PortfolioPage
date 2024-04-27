@@ -1,13 +1,11 @@
-import { useSelector } from 'react-redux';
-
-import Projects from './Projects';
+import FilterSection from './FilterSection';
+import ProjectList from './ProjectList';
 
 const Portfolio = () => {
-  const portfolio = useSelector(({ portfolio }) => portfolio.projects);
-
   return (
     <div>
-      <Projects projectList={portfolio} />
+      <FilterSection />
+      <ProjectList />
     </div>
   );
 };
