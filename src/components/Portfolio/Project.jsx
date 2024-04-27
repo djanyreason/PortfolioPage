@@ -15,7 +15,13 @@ const Project = ({ proj }) => {
 
   return (
     <div style={projStyle}>
-      {proj.name}
+      {!detail ? (
+        proj.name
+      ) : (
+        <a href={proj.url} target='_blank' rel='noreferrer'>
+          {proj.name}
+        </a>
+      )}
       <button
         onClick={toggleDetail}
         style={{ marginLeft: 10, marginBottom: 5 }}
