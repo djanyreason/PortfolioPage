@@ -18,7 +18,11 @@ const Project = ({ proj }) => {
       {!detail ? (
         proj.name
       ) : (
-        <a href={proj.url} target='_blank' rel='noreferrer'>
+        <a
+          href={proj.url ? proj.url : proj.repo}
+          target='_blank'
+          rel='noreferrer'
+        >
           {proj.name}
         </a>
       )}
@@ -29,10 +33,19 @@ const Project = ({ proj }) => {
         {detail ? 'show details' : 'hide details'}
       </button>
       <div style={detailStyle}>
-        <a href={proj.url} target='_blank' rel='noreferrer' style={detailStyle}>
-          {proj.url}
+        Repository:{' '}
+        <a href={proj.repo} target='_blank' rel='noreferrer'>
+          {proj.repo}
         </a>
       </div>
+      {proj.url ? (
+        <div style={detailStyle}>
+          Website:{' '}
+          <a href={proj.url} target='_blank' rel='noreferrer'>
+            {proj.url}
+          </a>
+        </div>
+      ) : null}
       <div style={detailStyle}>{proj.about}</div>
       <div style={detailStyle}>
         Keywords:{' '}
