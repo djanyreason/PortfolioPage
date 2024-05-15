@@ -40,7 +40,7 @@ const ProjectList = () => {
       <Table sx={tableStyle}>
         <TableBody>
           {portfolio.map((proj) => (
-            <TableRow key={proj.name}>
+            <TableRow key={proj.id}>
               <TableCell sx={{ p: 1 }}>
                 <Project proj={proj} />
               </TableCell>
