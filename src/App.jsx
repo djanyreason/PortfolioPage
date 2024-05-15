@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { Container } from '@mui/material';
+
 import { initializePortfolio } from './reducers/projectReducer';
 
 import Footer from './components/Footer';
@@ -16,12 +18,12 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <Container>
       <Header />
       <Bio />
       <Portfolio />
       <Footer />
-    </div>
+    </Container>
   );
 };
 

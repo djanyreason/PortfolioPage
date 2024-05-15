@@ -1,60 +1,63 @@
 import { useState } from 'react';
 
+import { Button, Link, Typography, Box } from '@mui/material';
+
 const Project = ({ proj }) => {
   const [detail, setDetail] = useState('true');
   const toggleDetail = () => setDetail(!detail);
 
-  const detailStyle = { marginBottom: 5, display: detail ? 'none' : '' };
-  const projStyle = {
-    paddingTop: 10,
-    paddingLeft: 2,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    marginBottom: 5,
-  };
+  const detailStyle = { mb: 0.5, display: detail ? 'none' : '' };
+  const buttonStyle = { ml: 1, pt: 0.125, px: 0.5, pb: 0 };
 
   return (
-    <div style={projStyle}>
-      {!detail ? (
-        proj.name
-      ) : (
-        <a
-          href={proj.url ? proj.url : proj.repo}
-          target='_blank'
-          rel='noreferrer'
+    <Box>
+      <Typography variant='body1' sx={{ mb: 0.5 }}>
+        {!detail ? (
+          proj.name
+        ) : (
+          <Link
+            href={proj.url ? proj.url : proj.repo}
+            target='_blank'
+            rel='noreferrer'
+          >
+            {proj.name}
+          </Link>
+        )}
+        <Button
+          variant='outlined'
+          color='secondary'
+          size='small'
+          onClick={toggleDetail}
+          sx={buttonStyle}
         >
-          {proj.name}
-        </a>
-      )}
-      <button
-        onClick={toggleDetail}
-        style={{ marginLeft: 10, marginBottom: 5 }}
-      >
-        {detail ? 'show details' : 'hide details'}
-      </button>
-      <div style={detailStyle}>
+          {detail ? 'show details' : 'hide details'}
+        </Button>
+      </Typography>
+      <Typography variant='body2' sx={detailStyle}>
         Repository:{' '}
-        <a href={proj.repo} target='_blank' rel='noreferrer'>
+        <Link href={proj.repo} target='_blank' rel='noreferrer'>
           {proj.repo}
-        </a>
-      </div>
+        </Link>
+      </Typography>
       {proj.url ? (
-        <div style={detailStyle}>
+        <Typography variant='body2' sx={detailStyle}>
           Website:{' '}
-          <a href={proj.url} target='_blank' rel='noreferrer'>
+          <Link href={proj.url} target='_blank' rel='noreferrer'>
             {proj.url}
-          </a>
-        </div>
+          </Link>
+        </Typography>
       ) : null}
-      <div style={detailStyle}>{proj.about}</div>
-      <div style={detailStyle}>
+      <Typography variant='body2' sx={detailStyle}>
+        {proj.about}
+      </Typography>
+      <Typography variant='body2' sx={detailStyle}>
         Keywords:{' '}
         {proj.keywords.reduce(
           (str, kword) => (str === '' ? kword : str + ', ' + kword),
           ''
         )}
-      </div>
-    </div>
+      </Typography>
+    </Box>
   );
 };
 

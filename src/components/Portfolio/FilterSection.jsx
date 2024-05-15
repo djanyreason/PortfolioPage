@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { filterUpdate, reset } from '../../reducers/filterReducer';
 
+import { Box, Button, Typography, TextField } from '@mui/material';
+
 import KeywordButtonList from './KeywordButtonList';
 
 const FilterSection = () => {
@@ -10,38 +12,29 @@ const FilterSection = () => {
   const handleFilterInput = (event) => {
     event.preventDefault();
 
-    dispatch(filterUpdate(event.target.value));
-  };
-
-  const resetFilter = (event) => {
-    event.preventDefault();
-    dispatch(reset());
+    dispatch(
+      event.target.value === '' ? reset() : filterUpdate(event.target.value)
+    );
   };
 
   const filterStyle = {
-    padding: 5,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    marginBottom: 5,
+    px: 0.75,
+    py: 1.25,
   };
 
   return (
-    <div style={filterStyle}>
-      <div>
-        Filter by Keyword:{' '}
-        <input
-          name='keywordfilter'
-          value={filterText}
-          onChange={handleFilterInput}
-        />
-      </div>
+    <Box sx={filterStyle}>
+      <TextField
+        label='Filter by Keyword'
+        type='search'
+        value={filterText}
+        size='small'
+        onChange={handleFilterInput}
+        fullWidth
+        color='primary'
+      />
       <KeywordButtonList />
-      <div>
-        <button onClick={resetFilter} disabled={false}>
-          Reset Filter
-        </button>
-      </div>
-    </div>
+    </Box>
   );
 };
 

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Paper } from '@mui/material';
+
 const Bio = () => {
   const [count, setCount] = useState(0);
 
@@ -9,11 +11,11 @@ const Bio = () => {
   };
 
   return (
-    <div>
-      <p>This is the Bio Section</p>
+    <Paper elevation={4} sx={{ marginTop: '10px', marginBottom: '10px' }}>
+      <div>This is the Bio Section</div>
       <p>Bio Click Count: {count}</p>
       <button onClick={incCount}>Bio Increment</button>
-    </div>
+    </Paper>
   );
 };
 

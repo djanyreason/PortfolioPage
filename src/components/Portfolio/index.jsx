@@ -1,12 +1,14 @@
 import FilterSection from './FilterSection';
 import ProjectList from './ProjectList';
 
+import { Paper } from '@mui/material';
+
 const Portfolio = () => {
   return (
-    <div>
+    <Paper elevation={4}>
       <FilterSection />
       <ProjectList />
-    </div>
+    </Paper>
   );
 };
 

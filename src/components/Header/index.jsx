@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { Container, Paper } from '@mui/material';
+
 const Header = () => {
   const [count, setCount] = useState(0);
 
@@ -9,11 +11,11 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <Paper elevation={4}>
       <p>This is the Header Section</p>
       <p>Header Click Count: {count}</p>
       <button onClick={incCount}>Header Increment</button>
-    </div>
+    </Paper>
   );
 };
 

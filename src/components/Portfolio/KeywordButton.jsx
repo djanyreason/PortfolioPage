@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Button } from '@mui/material';
+
 import { selectKeyword } from '../../reducers/filterReducer';
 
 const KeywordButton = ({ kword }) => {
@@ -12,10 +14,19 @@ const KeywordButton = ({ kword }) => {
     dispatch(selectKeyword(kword));
   };
 
+  const buttonStyle = { mr: 0.25, my: 0.25, py: 0, px: 0.5, fontSize: 12 };
+
   return (
-    <button onClick={handleClick} disabled={exclusive}>
+    <Button
+      variant='contained'
+      onClick={handleClick}
+      color='success'
+      disabled={exclusive}
+      size='small'
+      sx={buttonStyle}
+    >
       {kword}
-    </button>
+    </Button>
   );
 };
 
