@@ -41,7 +41,7 @@ const ProjectList = () => {
         <TableBody>
           {portfolio.map((proj) => (
             <TableRow key={proj.id}>
-              <TableCell sx={{ p: 1 }}>
+              <TableCell sx={{ px: 1.5, py: 0.75 }}>
                 <Project proj={proj} />
               </TableCell>
             </TableRow>

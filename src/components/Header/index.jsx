@@ -1,20 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-import { Container, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
+
+import MobileLayout from './MobileLayout';
+import NarrowLayout from './NarrowLayout';
+import WideLayout from './WideLayout';
 
 const Header = () => {
-  const [count, setCount] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
-  const incCount = (event) => {
-    event.preventDefault();
-    setCount(count + 1);
-  };
+  useEffect(() => {
+    window.onresize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+  }, [viewportWidth]);
 
   return (
-    <Paper elevation={4}>
-      <p>This is the Header Section</p>
-      <p>Header Click Count: {count}</p>
-      <button onClick={incCount}>Header Increment</button>
+    <Paper elevation={4} sx={{ p: 1.5 }}>
+      {viewportWidth >= 400 ? (
+        viewportWidth >= 640 ? (
+          <WideLayout />
+        ) : (
+          <NarrowLayout />
+        )
+      ) : (
+        <MobileLayout />
+      )}
     </Paper>
   );
 };
