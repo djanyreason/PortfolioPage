@@ -7,10 +7,7 @@ const HeaderLink = ({ label, icon, url, style }) => {
         fontSize: '1.00rem',
         '@media (min-width:900px)': { fontSize: '1.25rem' },
         '@media (min-width:1100px)': { fontSize: '1.50rem' },
-      },
-      subtitle1: {
-        fontSize: '1.00rem',
-        '@media (min-width:900px)': { fontSize: '1.20rem' },
+        fontStyle: 'italic',
       },
     },
   });
