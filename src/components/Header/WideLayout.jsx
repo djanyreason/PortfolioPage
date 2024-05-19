@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 
 import Selfie from './Selfie';
 import Name from './Name';
-import HeaderLinksLayout from './HeaderLinksLayout';
+import HeaderLink from './HeaderLink';
 
 const WideLayout = () => {
   return (
@@ -23,7 +23,13 @@ const WideLayout = () => {
           <Name variant={'h1'} />
         </Grid>
         <Grid item>
-          <HeaderLinksLayout />
+          <HeaderLink
+            url='https://www.linkedin.com/in/jay-anderson-052b5b25/'
+            label='LinkedIn'
+          />
+        </Grid>
+        <Grid item>
+          <HeaderLink url='https://github.com/djanyreason' label='GitHub' />
         </Grid>
       </Grid>
     </Grid>

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { filterUpdate, reset } from '../../reducers/filterReducer';
 
-import { Box, Button, Typography, TextField } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 
 import KeywordButtonList from './KeywordButtonList';
 

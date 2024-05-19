@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Container } from '@mui/material';
 
 import { initializePortfolio } from './reducers/projectReducer';
+import { setDisplay } from './reducers/displayReducer';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -15,6 +16,10 @@ const App = () => {
 
   useEffect(() => {
     dispatch(initializePortfolio());
+    dispatch(setDisplay(window.innerWidth));
+    window.onresize = () => {
+      dispatch(setDisplay(window.innerWidth));
+    };
   }, [dispatch]);
 
   return (

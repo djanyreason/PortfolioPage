@@ -5,7 +5,12 @@ const HeaderLink = ({ label, icon, url, style }) => {
     typography: {
       h6: {
         fontSize: '1.00rem',
-        '@media (min-width:1000px)': { fontSize: '1.25rem' },
+        '@media (min-width:900px)': { fontSize: '1.25rem' },
+        '@media (min-width:1100px)': { fontSize: '1.50rem' },
+      },
+      subtitle1: {
+        fontSize: '1.00rem',
+        '@media (min-width:900px)': { fontSize: '1.20rem' },
       },
     },
   });
@@ -14,7 +19,9 @@ const HeaderLink = ({ label, icon, url, style }) => {
     <ThemeProvider theme={theme}>
       <Typography variant='h6' textAlign='right'>
         {label}
-        {': '}
+        {':'}
+      </Typography>
+      <Typography variant='h6' textAlign='right'>
         <Link href={url} target='_blank' rel='noreferrer'>
           {url}
         </Link>

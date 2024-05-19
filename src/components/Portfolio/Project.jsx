@@ -7,7 +7,7 @@ const Project = ({ proj }) => {
   const toggleDetail = () => setDetail(!detail);
 
   const detailStyle = { mb: 0.5, display: detail ? 'none' : '' };
-  const buttonStyle = { ml: 1, pt: 0.125, px: 0.5, pb: 0 };
+  const buttonStyle = { pt: 0.125, px: 0.5, pb: 0 };
 
   return (
     <Box>
@@ -22,7 +22,7 @@ const Project = ({ proj }) => {
           >
             {proj.name}
           </Link>
-        )}
+        )}{' '}
         <Button
           variant='outlined'
           color='secondary'
