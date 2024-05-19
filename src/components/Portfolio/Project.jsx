@@ -9,13 +9,16 @@ const Project = ({ proj }) => {
 
   const mobileView = useSelector(({ display }) => display === 'Mobile');
 
-  const detailStyle = { mb: 0.5, display: detail ? 'none' : '' };
+  const detailStyle = {
+    mb: 0.5,
+    display: detail ? 'none' : 'block',
+  };
   const buttonStyle = { pt: 0.125, px: 0.5, pb: 0 };
 
   return (
     <Box>
       <Typography variant='body1' sx={{ mb: 0.5 }}>
-        {!detail ? (
+        {!detail && !mobileView ? (
           proj.name
         ) : (
           <Link
@@ -38,12 +41,14 @@ const Project = ({ proj }) => {
           </Button>
         )}
       </Typography>
-      <Typography variant='body2' sx={detailStyle}>
-        Repository:{' '}
-        <Link href={proj.repo} target='_blank' rel='noreferrer'>
-          {proj.repo}
-        </Link>
-      </Typography>
+      {mobileView ? null : (
+        <Typography variant='body2' sx={detailStyle}>
+          Repository:{' '}
+          <Link href={proj.repo} target='_blank' rel='noreferrer'>
+            {proj.repo}
+          </Link>
+        </Typography>
+      )}
       {proj.url ? (
         <Typography variant='body2' sx={detailStyle}>
           Website:{' '}

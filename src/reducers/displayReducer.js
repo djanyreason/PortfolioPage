@@ -5,8 +5,8 @@ const displaySlice = createSlice({
   initialState: 'Mobile',
   reducers: {
     updateDisplay(state, action) {
-      return action.payload >= 400
-        ? action.payload >= 640
+      return action.payload > 425
+        ? action.payload > 768
           ? 'Wide'
           : 'Narrow'
         : 'Mobile';

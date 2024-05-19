@@ -18,6 +18,7 @@ const App = () => {
     dispatch(initializePortfolio());
     dispatch(setDisplay(window.innerWidth));
     window.onresize = () => {
+      console.log(window.innerWidth);
       dispatch(setDisplay(window.innerWidth));
     };
   }, [dispatch]);
