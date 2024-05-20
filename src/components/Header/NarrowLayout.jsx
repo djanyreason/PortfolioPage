@@ -1,12 +1,13 @@
 import { Grid } from '@mui/material';
+import { LinkedIn, GitHub } from '@mui/icons-material';
 
 import Selfie from './Selfie';
 import Name from './Name';
-import HeaderLink from './HeaderLink';
+import HeaderLinkButton from './HeaderLinkButton';
 
 const NarrowLayout = () => {
   return (
-    <Grid container spacing={2} direction={'row'}>
+    <Grid container spacing={1.5} direction={'row'}>
       <Grid item xs={12}>
         <Name variant={'h2'} />
       </Grid>
@@ -18,18 +19,22 @@ const NarrowLayout = () => {
         item
         xs={6}
         direction={'column'}
-        alignItems={'flex-end'}
-        justifyContent={'space-between'}
-        sx={{ pr: 2 }}
+        alignItems={'center'}
+        justifyContent={'space-around'}
       >
         <Grid item>
-          <HeaderLink
+          <HeaderLinkButton
             url='https://www.linkedin.com/in/jay-anderson-052b5b25/'
             label='LinkedIn'
+            image={<LinkedIn fontSize='large' />}
           />
         </Grid>
         <Grid item>
-          <HeaderLink url='https://github.com/djanyreason' label='GitHub' />
+          <HeaderLinkButton
+            url='https://github.com/djanyreason'
+            label='GitHub'
+            image={<GitHub fontSize='large' />}
+          />
         </Grid>
       </Grid>
     </Grid>

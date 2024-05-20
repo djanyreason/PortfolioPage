@@ -17,7 +17,7 @@ const WideLayout = () => {
         direction={'column'}
         alignItems={'flex-end'}
         justifyContent={'space-between'}
-        sx={{ pr: 2 }}
+        sx={{ pr: 1.5 }}
       >
         <Grid item>
           <Name variant={'h1'} />

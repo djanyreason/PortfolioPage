@@ -1,6 +1,6 @@
 import { Typography, Link, createTheme, ThemeProvider } from '@mui/material';
 
-const HeaderLink = ({ label, icon, url, style }) => {
+const HeaderLink = ({ label, url }) => {
   const theme = createTheme({
     typography: {
       h6: {
