@@ -4,9 +4,10 @@ const HeaderLink = ({ label, url }) => {
   const theme = createTheme({
     typography: {
       h6: {
-        fontSize: '1.00rem',
-        '@media (min-width:900px)': { fontSize: '1.25rem' },
-        '@media (min-width:1100px)': { fontSize: '1.50rem' },
+        fontSize: '1.125rem',
+        '@media (min-width:850px)': { fontSize: '1.25rem' },
+        '@media (min-width:950px)': { fontSize: '1.375rem' },
+        '@media (min-width:1025px)': { fontSize: '1.50rem' },
         fontStyle: 'italic',
       },
     },

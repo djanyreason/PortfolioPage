@@ -23,7 +23,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Container sx={{ px: 3 }}>
       <Header />
       <Bio />
       <Portfolio />
