@@ -7,7 +7,13 @@ const filterSlice = createSlice({
     resetFilter(state, action) {
       return {
         text: '',
-        exact: false,
+        exact: state.exact,
+      };
+    },
+    toggleExact(state, action) {
+      return {
+        text: state.text,
+        exact: !state.exact,
       };
     },
     pickKeyword(state, action) {
@@ -19,7 +25,7 @@ const filterSlice = createSlice({
     updateFilter(state, action) {
       return {
         text: action.payload,
-        exact: false,
+        exact: state.exact,
       };
     },
   },
@@ -40,6 +46,12 @@ export const selectKeyword = (keyword) => {
 export const filterUpdate = (text) => {
   return (dispatch) => {
     dispatch(filterSlice.actions.updateFilter(text));
+  };
+};
+
+export const toggleExact = () => {
+  return (dispatch) => {
+    dispatch(filterSlice.actions.toggleExact());
   };
 };
 

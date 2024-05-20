@@ -6,7 +6,9 @@ import { selectKeyword } from '../../reducers/filterReducer';
 
 const KeywordButton = ({ kword }) => {
   const dispatch = useDispatch();
-  const exclusive = useSelector(({ filter }) => filter.exact);
+  const exclusive = useSelector(
+    ({ filter }) => filter.exact && filter.text === kword
+  );
 
   const handleClick = (event) => {
     event.preventDefault();

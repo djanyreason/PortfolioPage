@@ -1,13 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { filterUpdate, reset } from '../../reducers/filterReducer';
+import { filterUpdate, reset, toggleExact } from '../../reducers/filterReducer';
 
-import { Box, TextField } from '@mui/material';
+import {
+  TextField,
+  FormGroup,
+  FormControlLabel,
+  Checkbox,
+} from '@mui/material';
 
 import KeywordButtonList from './KeywordButtonList';
 
 const FilterSection = () => {
   const dispatch = useDispatch();
-  const filterText = useSelector(({ filter }) => filter.text);
+  const filter = useSelector(({ filter }) => filter);
 
   const handleFilterInput = (event) => {
     event.preventDefault();
@@ -17,24 +22,37 @@ const FilterSection = () => {
     );
   };
 
+  const handleExactToggle = (event) => {
+    event.preventDefault();
+
+    dispatch(toggleExact());
+  };
+
   const filterStyle = {
     px: 0.75,
     py: 1.25,
   };
 
   return (
-    <Box sx={filterStyle}>
+    <FormGroup sx={filterStyle}>
       <TextField
         label='Filter by Keyword'
         type='search'
-        value={filterText}
+        value={filter.text}
         size='small'
         onChange={handleFilterInput}
         fullWidth
         color='primary'
       />
+      <FormControlLabel
+        control={
+          <Checkbox checked={filter.exact} onChange={handleExactToggle} />
+        }
+        label='Exact Match'
+        sx={{ my: -1 }}
+      />
       <KeywordButtonList />
-    </Box>
+    </FormGroup>
   );
 };
 
