@@ -79,23 +79,6 @@ const portfolioData = [
     ],
   },
   {
-    id: 'FSO_06',
-    name: 'Full Stack Open Pt. 6: Advanced State Management',
-    repo: 'https://github.com/djanyreason/FSO_06',
-    about:
-      'This repository is for exercises in Part 6 of Full Stack Open (FSO), "Advanced state management". The projects in this repo are all front-end React web apps, though some have a back-end component handled through json-server. The projects are focused on state management using either Redux or React Query and useReducer.',
-    keywords: [
-      'react',
-      'redux',
-      'state-management',
-      'redux-thunk',
-      'axios',
-      'usereducer',
-      'react-query',
-      'redux-toolkit',
-    ],
-  },
-  {
     id: 'FSO_09',
     name: 'Full Stack Open Pt. 9: TypeScript',
     repo: 'https://github.com/djanyreason/FSO_09',
@@ -124,8 +107,25 @@ const portfolioData = [
       'react-bootstrap',
       'axios',
       'react-css',
-      'reat-material-ui',
+      'react-material-ui',
       'react-hooks',
+    ],
+  },
+  {
+    id: 'FSO_06',
+    name: 'Full Stack Open Pt. 6: Advanced State Management',
+    repo: 'https://github.com/djanyreason/FSO_06',
+    about:
+      'This repository is for exercises in Part 6 of Full Stack Open (FSO), "Advanced state management". The projects in this repo are all front-end React web apps, though some have a back-end component handled through json-server. The projects are focused on state management using either Redux or React Query and useReducer.',
+    keywords: [
+      'react',
+      'redux',
+      'state-management',
+      'redux-thunk',
+      'axios',
+      'usereducer',
+      'react-query',
+      'redux-toolkit',
     ],
   },
   {
