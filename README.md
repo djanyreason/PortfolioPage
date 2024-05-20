@@ -1,3 +1,5 @@
-Single page react app for portfolio projects
+This repository is a single page React app website to display web development projects in my personal portfolio.
 
-I said I would update this README to have more detail before setting the repo public, but I needed to make it public to use github pages, so that was a lie. I will update it once its moderately ready for prime time
+The project is built in React, and uses Redux for state management. It does not interface with a backend, but it is structured as if it could do so were there a backend server running to supply the portfolio project data.
+
+The website can be seen live at https://djannyreason.github.io/PortfolioPage/
