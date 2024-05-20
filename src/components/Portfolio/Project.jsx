@@ -41,7 +41,15 @@ const Project = ({ proj }) => {
           </Button>
         )}
       </Typography>
-      {mobileView ? null : (
+      {mobileView ? (
+        proj.url ? (
+          <Typography variant='body2' sx={detailStyle}>
+            <Link href={proj.repo} target='_blank' rel='noreferrer'>
+              Repository
+            </Link>
+          </Typography>
+        ) : null
+      ) : (
         <Typography variant='body2' sx={detailStyle}>
           Repository:{' '}
           <Link href={proj.repo} target='_blank' rel='noreferrer'>
@@ -49,7 +57,7 @@ const Project = ({ proj }) => {
           </Link>
         </Typography>
       )}
-      {proj.url ? (
+      {!mobileView && proj.url ? (
         <Typography variant='body2' sx={detailStyle}>
           Website:{' '}
           <Link href={proj.url} target='_blank' rel='noreferrer'>
