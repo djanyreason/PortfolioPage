@@ -10,7 +10,7 @@ const portfolioData = [
       'react',
       'redux',
       'state-management',
-      'material-ui',
+      'react-material-ui',
       'react-components',
     ],
   },
