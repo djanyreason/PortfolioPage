@@ -1,5 +1,20 @@
 const portfolioData = [
   {
+    id: 'eJT',
+    name: 'Electronic Jam Timer (eJT)',
+    repo: 'https://github.com/djanyreason/eJT/',
+    about:
+      'This is a React Native app that acts as a stopwatch/timer for the Jam Timer non-skating official in flat track roller derby. The app simultaneously manages a countdown period timer and a second timer which switches between jam time (countdown/descending), lineup time (countdown/descending), and timeout time (ascending) depending on the game state of the Roller Derby bout. Progression between game states is controlled by user input or automatically when countdown timers reach zero. The app also allows the user to configure the amount of time for each type of countdown clock.',
+    keywords: [
+      'react-native',
+      'react-router-native',
+      'state-management',
+      'flexbox',
+      'usecontext',
+      'usereducer',
+    ],
+  },
+  {
     id: 'PortfolioPage',
     name: 'Web and Mobile Development Portfolio',
     repo: 'https://github.com/djanyreason/PortfolioPage/',
