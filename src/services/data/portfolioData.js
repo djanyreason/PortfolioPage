@@ -158,6 +158,7 @@ const portfolioData = [
       'localstorage',
       'end-to-end testing',
       'cypress',
+      'playwright',
       'token-based-authentication',
       'prop-types',
       'usestate',
