@@ -10,7 +10,7 @@ const Header = () => {
   const viewport = useSelector(({ display }) => display);
 
   return (
-    <Paper elevation={4} sx={{ p: 1.5 }}>
+    <Paper elevation={16} sx={{ p: 1.5 }}>
       {viewport === 'Wide' ? (
         <WideLayout />
       ) : viewport === 'Narrow' ? (

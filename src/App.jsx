@@ -23,7 +23,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <Container sx={{ px: 3 }}>
+    <Container sx={{ px: 3 }} maxWidth='lg'>
       <Header />
       <Bio />
       <Portfolio />

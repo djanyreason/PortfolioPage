@@ -5,7 +5,7 @@ import { Paper } from '@mui/material';
 
 const Portfolio = () => {
   return (
-    <Paper elevation={4} sx={{ my: 1.5 }}>
+    <Paper elevation={16} sx={{ my: 1.5 }}>
       <FilterSection />
       <ProjectList />
     </Paper>

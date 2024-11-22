@@ -7,3 +7,4 @@ cypress/fixtures
 .prettierignore
 /assets
 /dist
+src/components/Playgrounds

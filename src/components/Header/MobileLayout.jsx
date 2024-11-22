@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 import { LinkedIn, GitHub } from '@mui/icons-material';
 
 import Selfie from './Selfie';
@@ -7,35 +7,34 @@ import HeaderIconButton from './HeaderIconButton';
 
 const MobileLayout = () => {
   return (
-    <Grid container spacing={1.5} direction={'column'}>
-      <Grid item xs={12}>
+    <Grid2 container spacing={1.5} direction={'column'}>
+      <Grid2 size={12}>
         <Name variant={'h2'} />
-      </Grid>
-      <Grid item xs={12}>
+      </Grid2>
+      <Grid2 size={12}>
         <Selfie />
-      </Grid>
-      <Grid
+      </Grid2>
+      <Grid2
         container
-        item
-        xs={12}
+        size={12}
         direction={'row'}
         alignItems={'center'}
         justifyContent={'space-around'}
       >
-        <Grid item>
+        <Grid2>
           <HeaderIconButton
             url='https://www.linkedin.com/in/jay-anderson-052b5b25/'
             image={<LinkedIn sx={{ fontSize: '4rem' }} />}
           />
-        </Grid>
-        <Grid item>
+        </Grid2>
+        <Grid2>
           <HeaderIconButton
             url='https://github.com/djanyreason'
             image={<GitHub sx={{ fontSize: '3.5rem' }} />}
           />
-        </Grid>
-      </Grid>
-    </Grid>
+        </Grid2>
+      </Grid2>
+    </Grid2>
   );
 };
 

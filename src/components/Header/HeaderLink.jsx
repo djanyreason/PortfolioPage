@@ -9,6 +9,7 @@ const HeaderLink = ({ label, url }) => {
         '@media (min-width:950px)': { fontSize: '1.375rem' },
         '@media (min-width:1025px)': { fontSize: '1.50rem' },
         fontStyle: 'italic',
+        color: '#333333',
       },
     },
   });
@@ -20,7 +21,13 @@ const HeaderLink = ({ label, url }) => {
         {':'}
       </Typography>
       <Typography variant='h6' textAlign='right'>
-        <Link href={url} target='_blank' rel='noreferrer'>
+        <Link
+          href={url}
+          target='_blank'
+          rel='noreferrer'
+          color='#3e5060'
+          underline='hover'
+        >
           {url}
         </Link>
       </Typography>

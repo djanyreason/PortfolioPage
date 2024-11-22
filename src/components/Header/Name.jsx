@@ -40,7 +40,9 @@ const Name = ({ variant }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Typography variant={variant}>John F. Anderson</Typography>
+      <Typography variant={variant} sx={{ color: '#37474f' }}>
+        John F. Anderson
+      </Typography>
     </ThemeProvider>
   );
 };
