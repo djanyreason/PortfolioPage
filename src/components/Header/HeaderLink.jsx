@@ -1,7 +1,8 @@
-import { Typography, Link, createTheme, ThemeProvider } from '@mui/material';
+import { Typography, Link, ThemeProvider } from '@mui/material';
+import { createPortfolioTheme } from '../../PortfolioTheme/util';
 
 const HeaderLink = ({ label, url }) => {
-  const theme = createTheme({
+  const theme = createPortfolioTheme({
     typography: {
       h6: {
         fontSize: '1.125rem',
@@ -25,7 +26,7 @@ const HeaderLink = ({ label, url }) => {
           href={url}
           target='_blank'
           rel='noreferrer'
-          color='#3e5060'
+          color='secondary'
           underline='hover'
         >
           {url}

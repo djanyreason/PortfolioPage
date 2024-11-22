@@ -78,7 +78,7 @@ const Project = ({ proj }) => {
       {mobileView ? (
         <Button
           variant={detail ? 'contained' : 'outlined'}
-          color='primary'
+          color='secondary'
           size='small'
           onClick={toggleDetail}
           sx={{ ...buttonStyle, width: '100%' }}

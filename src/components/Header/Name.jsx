@@ -1,7 +1,8 @@
-import { Typography, createTheme, ThemeProvider } from '@mui/material';
+import { Typography, ThemeProvider } from '@mui/material';
+import { createPortfolioTheme } from '../../PortfolioTheme/util';
 
 const Name = ({ variant }) => {
-  const theme = createTheme({
+  const theme = createPortfolioTheme({
     typography: {
       fontFamily: ['cursive', 'Dancing Script'],
       h1: {
@@ -40,7 +41,7 @@ const Name = ({ variant }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Typography variant={variant} sx={{ color: '#37474f' }}>
+      <Typography variant={variant} color='primary'>
         John F. Anderson
       </Typography>
     </ThemeProvider>

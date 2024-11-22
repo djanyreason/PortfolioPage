@@ -1,9 +1,8 @@
-import { Typography, Link, createTheme, ThemeProvider } from '@mui/material';
+import { Typography, Link, ThemeProvider } from '@mui/material';
+import { createPortfolioTheme } from '../../PortfolioTheme/util';
 
 const Content = () => {
-  console.log('Render!');
-
-  const theme = createTheme({
+  const theme = createPortfolioTheme({
     typography: {
       fontFamily: ['cursive', 'Englebert', 'Patrick Hand'],
       body1: {
@@ -32,7 +31,7 @@ const Content = () => {
           href='https://fullstackopen.com/en'
           target='_blank'
           rel='noreferrer'
-          color='#3e5060'
+          color='secondary'
           underline='hover'
         >
           {'Full Stack Open "Deep Dive Into Modern Web Development"'}
@@ -42,7 +41,7 @@ const Content = () => {
           href='https://www.theodinproject.com/paths/foundations/courses/foundations'
           target='_blank'
           rel='noreferrer'
-          color='#3e5060'
+          color='secondary'
           underline='hover'
         >
           {'The Odin Project Foundations Course.'}

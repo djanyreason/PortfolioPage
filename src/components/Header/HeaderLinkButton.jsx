@@ -7,7 +7,6 @@ const HeaderLinkButton = ({ label, url, image }) => {
     width: '10rem',
     px: 0,
     mx: 0,
-    backgroundColor: '#3e5060',
   };
 
   return (
@@ -19,6 +18,7 @@ const HeaderLinkButton = ({ label, url, image }) => {
       target='_blank'
       rel='noreferrer'
       endIcon={image}
+      color='secondary'
     >
       {label}
     </Button>
