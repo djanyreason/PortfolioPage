@@ -7,7 +7,7 @@ const filterSlice = createSlice({
     resetFilter(state, action) {
       return {
         text: '',
-        exact: state.exact,
+        exact: false,
       };
     },
     toggleExact(state, action) {
