@@ -4,7 +4,7 @@ import { TabList, TabPanel, TabContext } from '@mui/lab';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import Content from './Content';
+import Bio from './Bio';
 import { createPortfolioTheme } from '../../PortfolioTheme/util';
 
 const PersonalDetail = () => {
@@ -23,10 +23,11 @@ const PersonalDetail = () => {
   });
 
   const tabbedSections = [
-    { label: 'Biographical\nSummary', content: <Content /> },
-    { label: 'Education\nHistory', content: 'Education' },
-    { label: 'Employment\nHistory', content: 'Employment' },
+    { label: 'Biographical\nSummary', content: <Bio /> },
     { label: 'Technical\nSkills', content: 'Skills' },
+    { label: 'Education &\nTraining', content: 'Education' },
+    { label: 'Employment\nHistory', content: 'Employment' },
+    { label: 'Publications', content: 'Publications' },
     { label: 'Personal\nInterests', content: 'Interests' },
   ];
 
@@ -84,7 +85,15 @@ const PersonalDetail = () => {
         </Box>
         <ThemeProvider theme={theme}>
           {tabbedSections.map((section, index) => (
-            <TabPanel value={index} key={index} sx={{ px: '12px', py: '0px' }}>
+            <TabPanel
+              value={index}
+              key={index}
+              sx={{
+                px: '12px',
+                py: '0px',
+                font: 'Helvetica',
+              }}
+            >
               {section.content}
             </TabPanel>
           ))}

@@ -1,6 +1,6 @@
 import { Typography, Link, Box } from '@mui/material';
 
-const Content = () => {
+const Bio = () => {
   return (
     <Box>
       <Typography variant='body1'>
@@ -41,4 +41,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Bio;
