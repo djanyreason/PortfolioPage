@@ -6,10 +6,10 @@ import { Container } from '@mui/material';
 import { initializePortfolio } from './reducers/projectReducer';
 import { setDisplay } from './reducers/displayReducer';
 
-import Footer from './components/Footer';
 import Header from './components/Header';
-import Bio from './components/Bio';
+import PersonalDetail from './components/PersonalDetail';
 import Portfolio from './components/Portfolio';
+import Footer from './components/Footer';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <Container sx={{ px: 3 }} maxWidth='lg'>
       <Header />
-      <Bio />
+      <PersonalDetail />
       <Portfolio />
       <Footer />
     </Container>

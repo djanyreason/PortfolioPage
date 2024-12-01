@@ -1,26 +1,8 @@
-import { Typography, Link, ThemeProvider } from '@mui/material';
-import { createPortfolioTheme } from '../../PortfolioTheme/util';
+import { Typography, Link, Box } from '@mui/material';
 
 const Content = () => {
-  const theme = createPortfolioTheme({
-    typography: {
-      fontFamily: ['cursive', 'Englebert', 'Patrick Hand'],
-      h6: {
-        fontSize: '1.75rem',
-      },
-      body1: {
-        marginBottom: '0.5rem',
-        fontSize: '1.25rem',
-        color: '#333333',
-      },
-    },
-  });
-
   return (
-    <ThemeProvider theme={theme}>
-      <Typography variant='h6' color='primary'>
-        {'Biographical Summary:'}
-      </Typography>
+    <Box>
       <Typography variant='body1'>
         {
           'In 2003, I graduated from the Cornell University College of Engineering with a degree in Computer Science. After a few years working in software development, I attended Law School at the University of Virginia, and since graduating in 2009 I have spent the past 15 years working in Public Service as a Budget Analyst for the US Federal Government.'
@@ -55,7 +37,7 @@ const Content = () => {
           'Below are a list of personal projects and projects completed as a part of Full Stack Open and The Odin Project. It also includes the ability to filter by project keyword.'
         }
       </Typography>
-    </ThemeProvider>
+    </Box>
   );
 };
 
